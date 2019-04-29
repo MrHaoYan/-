@@ -51,14 +51,16 @@
  + 元素浮动以后即完全脱离文档流，这时不会再影响父元素的高度。也就是浮动元素不会撑开父元素
  + 如何解决
  + 代码如下
- ```.main+
+ ```
+    .main+
 			/*height: 600px;*/
 			background-color: pink;
 			/*清除浮动的影响*/
 			/*overflow: hidden;*/
 		}
  ```
- ```.clr{
+ ```
+    .clr{
 			/*清除浮动的影响,父元素下设置一个空盒子*/
 			/*clear: both;*/
 		}
@@ -67,15 +69,20 @@
 ##### 块状垂直居中.
  + 不知道父盒子高度的情况下,可以用transform
  + html代码如下
- ```.son{
+
+ ```
+    .son{
 			top:50%;
 			transform: translateY(-50%);
-		}```
+		}
+```
  + css代码如下
- ```.son{
+ ```
+    .son{
 			top:50%;
 			trans+orm: translateY(-50%);
-		}```
+		}
+```
 
 + 同理水平方向用translateX()
 
@@ -84,7 +91,8 @@
  + 按钮有种水波扩散的效果.
  + 对box里的a标签设置分液器如下.
 
- ```.box{
+ ```
+    .box{
 			height: 50px;
 			width: 50px;
 			background-color:pink;
@@ -101,17 +109,21 @@
 		a:hover{
 			border-color: yellow;
 			background-color: white;
-		}```
+		}
+```
 #### 对transform的匀速运动.
 
  + 对一个盒子hover,如长宽或位置发生变化,都可以匀速处理.
  + html代码如下.
 
-```<div class="box">
+```
+    <div class="box">
 		<div class="son"></div>
-	</div>```
+	</div>
+```
  +css代码如下.
-  ```.box{
+  ```
+  .box{
 			width: 800px;
 			height: 200px;
 			background-color:pink;
@@ -124,7 +136,8 @@
 		.box:hover .son{
 			transform: translateX(600px);
 			transition: all 4s ease;
-		}```
+		}
+```
 
 + z-index可以指定一个整数作为参数，值越大元素显示的优先级越高，也就是z-index值较大的元素会显示在网页的最上层.
 
