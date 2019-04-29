@@ -76,10 +76,14 @@
 			top:50%;
 			trans+orm: translateY(-50%);
 		}```
+
 + 同理水平方向用translateX()
-#####分液器
+
+##### 分液器
+
  + 按钮有种水波扩散的效果.
  + 对box里的a标签设置分液器如下.
+
  ```.box{
 			height: 50px;
 			width: 50px;
@@ -99,8 +103,10 @@
 			background-color: white;
 		}```
 #### 对transform的匀速运动.
+
  + 对一个盒子hover,如长宽或位置发生变化,都可以匀速处理.
  + html代码如下.
+
 ```<div class="box">
 		<div class="son"></div>
 	</div>```
@@ -119,9 +125,12 @@
 			transform: translateX(600px);
 			transition: all 4s ease;
 		}```
+
 + z-index可以指定一个整数作为参数，值越大元素显示的优先级越高，也就是z-index值较大的元素会显示在网页的最上层.
+
 + 对span设置text-indent没有起作用，是因为text-indent只能给块级元素设置。
 但是如果让span{display:block}转换为块级元素，就会换行，还得通过浮动来控制，增加了麻烦。所以改css为span{display:inline-block;}。
+
 + 对span设置text-indent没有起作用，是因为text-indent只能给块级元素设置。
 但是如果让span{display:block}转换为块级元素，就会换行，还得通过浮动来控制，增加了麻烦。所以改css为span{display:inline-block;}。
 
