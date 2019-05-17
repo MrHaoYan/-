@@ -16,7 +16,7 @@
          .d1>.box{
             width: 300px;
         }
-```
+``` 
 + 选择相应下标的元素`$('li:eq(1)').css('background', 'red');`
 + // 选择序号大于index的元素`$('li:gt(5)').css('background', 'red');`
 + // 选择小于index的元素`$('li:lt(5)').css('background', 'blue');`
