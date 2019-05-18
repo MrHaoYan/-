@@ -411,3 +411,27 @@ $('li').each(function(index,ele){
                 }
             })
 ```
++ 序号问题解决方案
+```
+    var deltr =function(index)
+    {     
+
+        var _len = $("#tab tr").length;
+        $("tr[id='"+index+"']").remove();//删除当前行
+        for(var i=index+1,j=_len;i<j;i++)
+        	//当前行删除后对后续的表格进行遍历,i代表删除表格的下一行表格,j代表表格总长度
+        {   
+
+
+            var nextTxtVal = $("#desc"+i).val();
+            //获取删除行的下一行的输入框内容
+            $("tr[id=\'"+i+"\']").replaceWith("<tr id="+(i-1)+" align='center'>"
+            	//删除行的下一行和删除行的信息(id,序号,name,下一行文本框内容,onclick事件触发)进行替换
+                                +"<td>"+(i-1)+"</td>"
+                               +"<td>Dynamic TR"+(i-1)+"</td>"
+                                +"<td><input type='text' name='desc"+(i-1)+"' value='"+nextTxtVal+"' id='desc"+(i-1)+"'/></td>"
+                                +"<td><a href=\'#\' onclick=\'deltr("+(i-1)+")\'>删除</a></td>"
+                            +"</tr>");
+       }    
+        
+    }
