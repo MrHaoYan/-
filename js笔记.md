@@ -207,12 +207,12 @@ function isPrime (num){
 + 复杂数据(ex数组)作为参数传递的时候会影响外部的参数,因为归根结底原数据被修改了
 #### Fibonacci数列
 ```
-function Fibonacci (n){
+function Fibonacci(n){
 			// 跳出条件
 			if(n===1||n===2){
 				return 1;
 			}
-			return f(n-1)+f(n-2);
+			return Fibonacci(n-1)+Fibonacci(n-2);
 		}
 ```
 ### 对象
