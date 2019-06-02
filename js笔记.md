@@ -130,7 +130,7 @@ console.log(typeof null); // object
 #### 选择排序
 ```
 function selectSort (arr){
-			for (var i = 0; i < arr.length; i++) {
+			for (var i = 0; i < arr.length-1; i++) {
 				var minIndex = i;
 				for (var j = i+1; j < arr.length; j++) {
 					if(arr[minIndex]>arr[j]){
